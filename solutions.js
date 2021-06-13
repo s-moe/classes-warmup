@@ -29,9 +29,9 @@ console.log(black)
 function extraWeight(Cat){
    Cat.weight = 20;
 }
-extraWeight(black);
+extraWeight(orange);
 
-console.log(black)
+console.log(orange)
 
 const catsArr = ['Cat1', 'Cat2', 'Cat3', 'Cat4', 'Cat5', 'Cat6']
 for (let i = 0; i < 6; i++) {
@@ -51,18 +51,37 @@ class Pirate {
     this.weight = weight;
     this.name = name;
   }
-  run(){
-    console.log ('Run!')
+  run(enemy){
+    return ('Run!')
   }
-  attack(){
-    console.log('Attack!')
+  attack(enemy){
+    return ('Attack!')
   }
-  sleep(){
-    console.log('Time for bed')
+  sleep(pirate){
+    return ('Time for bed')
   }
 }
 
-const BlackPearl = [new Pirate('Pirate1'), new Pirate('Pirate2'), new Pirate('Pirate3')];
-const FriendlyPirates = ['Pirate1', 'Pirate2', 'Pirate3'];
+const TinyPirates = [
+  new Pirate('4 feet', '105', 'Tiny1'),
+  new Pirate('2 feet', '65','Tiny2'),
+  new Pirate('1.5 feet', '45', 'Tiny3')
+];
+const FriendlyPirates = [
+  new Pirate('6 feet', '220', 'Pirate1'),
+  new Pirate('3.5 feet', '75', 'Pirate2'),
+  new Pirate('9 feet', '335', 'Pirate3')];
 
-console.log(BlackPearl)//not working
+console.log(TinyPirates)
+console.log(FriendlyPirates)
+
+TinyPirates.forEach(function(item) {
+  console.log(item)
+})
+
+FriendlyPirates.forEach(function(item, index) {
+  console.log(item, index)
+})
+
+// console.log(TinyPirates[0].name)
+// console.log(TinyPirates[0].attack(FriendlyPirates[0]))
